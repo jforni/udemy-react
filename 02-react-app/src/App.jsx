@@ -3,21 +3,27 @@ import reactLogo from './assets/react.svg'
 import './App.css'
 
 const App = () => {
-  const nombre = "Julio"
+  
+  let contador = 50;
+  const disminuir = () => {
+    contador--;
+    console.log(contador);
+  }
+
   return (
     <div className="App">
       <header className='App-header'>
         <div>
           <a href="https://vitejs.dev" target="_blank">
-            <img src="/vite.svg" className="logo" alt="Vite logo" />
+            <img src="/vite.svg" width="250" className="logo" alt="Vite logo" />
           </a>
           <a href="https://reactjs.org" target="_blank">
-            <img src={reactLogo} className="logo react" alt="React logo" />
+            <img src={reactLogo} width="250" className="logo react" alt="React logo" />
           </a>
         </div>
         <p>
-          <button> - </button>
-          <h2>10</h2>
+          <button onClick={ disminuir }> - </button>
+          <h2>{contador}</h2>
           <button> + </button>
         </p>
 
