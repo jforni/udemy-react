@@ -3,10 +3,15 @@ import reactLogo from './assets/react.svg'
 import './App.css'
 
 const App = () => {
-  
-  let contador = 50;
+
+  const [ contador, setContador] = useState(0);
+
   const disminuir = () => {
-    contador--;
+    setContador(contador - 1)
+    console.log(contador);
+  }
+  const aumentar = () => {
+    setContador(contador + 1)
     console.log(contador);
   }
 
@@ -24,7 +29,7 @@ const App = () => {
         <p>
           <button onClick={ disminuir }> - </button>
           <h2>{contador}</h2>
-          <button> + </button>
+          <button onClick={ aumentar }> + </button>
         </p>
 
         <h1>{new Date().getDate() + '/' + new Date().getMonth()+1 + '/' + new Date().getFullYear() }</h1>
