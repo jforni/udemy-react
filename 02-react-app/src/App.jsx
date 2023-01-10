@@ -26,11 +26,11 @@ const App = () => {
             <img src={reactLogo} width="250" className="logo react" alt="React logo" />
           </a>
         </div>
-        <p>
+        <div>
           <button onClick={ disminuir }> - </button>
           <h2>{contador}</h2>
           <button onClick={ aumentar }> + </button>
-        </p>
+        </div>
 
         <h1>{new Date().getDate() + '/' + new Date().getMonth()+1 + '/' + new Date().getFullYear() }</h1>
       </header>      
